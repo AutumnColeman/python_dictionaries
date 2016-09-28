@@ -21,7 +21,6 @@ ramit = {
   ]
 }
 print ramit.get('email')
-#How do I use the get function for the following?:
 print ramit['interests'][0]
 print ramit['friends'][0]['email']
-print ramit['friends'][0]['interests'][1]
+print ramit['friends'][1]['interests'][1]

@@ -12,11 +12,13 @@ for char in blues:
     for word in char.split():
         counts[word] = counts.get(word, 0) + 1
 
-for word, count in counts.items():
-    lst = counts.items() #counts words and puts the tuples in list
+entries = counts.items()
 
-sorted_list = sorted(lst, key=counts.get ,reverse=True) #sorts the list
-top_10 = (sorted_list[:10]) #extracts the first 10 words
-print top_10
+entries.sort(key=lambda entry: entry[1], reverse=True)
+
+top_10 = entries[:10]
+
+for word, count in top_10:
+    print "%s appeared in %d times." % (word, count)
 
 blues.close()
