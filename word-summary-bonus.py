@@ -13,10 +13,9 @@ for char in blues:
         counts[word] = counts.get(word, 0) + 1
 
 for word, count in counts.items():
-        top_10 = counts.sort()
-        while i < 10:
-            print top_10.pop()
-            break
-        #print "%s: %d" % (word, counts[word])
+    lst = counts.items()
+sorted_list = sorted(lst, key=lst.get ,reverse=True)
+top_10 = (sorted_list[:10])
+print top_10
 
 blues.close()
