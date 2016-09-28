@@ -14,7 +14,7 @@ for char in blues:
 
 entries = counts.items()
 
-entries.sort(key=lambda entry: entry[1], reverse=True)
+entries.sort(key=lambda (word, count): count, reverse=True)
 
 top_10 = entries[:10]
 
