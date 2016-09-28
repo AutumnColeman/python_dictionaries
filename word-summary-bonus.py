@@ -13,9 +13,10 @@ for char in blues:
         counts[word] = counts.get(word, 0) + 1
 
 for word, count in counts.items():
-    lst = counts.items()
-sorted_list = sorted(lst, key=lst.get ,reverse=True)
-top_10 = (sorted_list[:10])
+    lst = counts.items() #counts words and puts the tuples in list
+
+sorted_list = sorted(lst, key=counts.get ,reverse=True) #sorts the list
+top_10 = (sorted_list[:10]) #extracts the first 10 words
 print top_10
 
 blues.close()
